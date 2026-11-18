@@ -910,6 +910,55 @@ button {
     }
 }
 
+
+.dresscode-container {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.section-label {
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.dresscode-container h1 {
+    font-size: 32px;
+    margin: 15px 0 5px;
+}
+
+.dresscode-container h2 {
+    color: #96765A;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.dresscode-description {
+    max-width: 350px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.dresscode-image {
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.dresscode-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.dresscode-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #96765A;
+}
+
+
 /* ==============================
    RESPONSIVE DESIGN
 ============================== */
