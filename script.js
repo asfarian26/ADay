@@ -66,23 +66,110 @@ document.querySelectorAll(".photo-upload").forEach(input => {
 
 
 /* ==============================
+   EMAILJS CONFIGURATION
+============================== */
+
+// Replace these with your actual EmailJS credentials
+
+const EMAILJS_PUBLIC_KEY = "-OwhrWxsejGBRaRUl";
+const EMAILJS_SERVICE_ID = "service_32ybdtr";
+const EMAILJS_TEMPLATE_ID = "template_87hih2p";
+
+
+// Prevent duplicate email submissions
+let attendanceEmailSent = false;
+
+
+// Send attendance response to email
+async function sendAttendanceEmail(response) {
+
+    if (attendanceEmailSent) return;
+
+    if (typeof emailjs === "undefined") {
+        console.error("EmailJS SDK is not loaded.");
+        alert("Email service is unavailable. Please try again.");
+        return;
+    }
+
+    try {
+
+        const templateParams = {
+
+            to_email: "asfarinaaffian26@gmail.com",
+
+            attendance: response,
+
+            event_name: "Akid Azizi's Day",
+
+            event_date: "21 November 2026",
+
+            event_time: "11:00 AM - 8:00 PM",
+
+            submitted_at: new Date().toLocaleString()
+
+        };
+
+        await emailjs.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            templateParams
+        );
+
+        attendanceEmailSent = true;
+
+        console.log("Attendance email sent successfully!");
+
+    } catch (error) {
+
+        console.error("Email sending failed:", error);
+
+        alert(
+            "Your response was recorded on screen, but the email could not be sent. Please try again."
+        );
+
+    }
+
+}
+
+
+/* ==============================
    ATTENDANCE CONFIRMATION
 ============================== */
 
 // When user clicks NO
 function noNotification() {
-    document.getElementById("noModal").classList.add("show");
+
+    sendAttendanceEmail("NO");
+
+    document.getElementById("noModal")
+        .classList.add("show");
+
 }
 
+
+// Close NO notification
 function closeNoModal() {
-    document.getElementById("noModal").classList.remove("show");
 
-    confirmAttendance();
+    document.getElementById("noModal")
+        .classList.remove("show");
+
+    showAttendanceSuccess();
+
 }
 
 
-// When user clicks YES or after NO notification
+// When user clicks YES
 function confirmAttendance() {
+
+    sendAttendanceEmail("YES");
+
+    showAttendanceSuccess();
+
+}
+
+
+// Display success message
+function showAttendanceSuccess() {
 
     const successMessage =
         document.getElementById("successMessage");
@@ -106,7 +193,6 @@ function confirmAttendance() {
     attendanceBear.style.display = "none";
     attendanceNote.style.display = "none";
 
-    // Display BACK button on success page
     document.getElementById("successNavigation")
         .style.display = "flex";
 
@@ -114,6 +200,7 @@ function confirmAttendance() {
         behavior: "smooth",
         block: "center"
     });
+
 }
 
 
@@ -123,14 +210,11 @@ function confirmAttendance() {
 
 function backToTentative() {
 
-    // Hide success page navigation
     document.getElementById("successNavigation")
         .style.display = "none";
 
-    // Return to Page 3
     showPage(3);
 
-    // Hide navigation buttons on Page 3
     document.querySelector("#page3 .navigation")
         .style.display = "none";
 }
@@ -143,5 +227,14 @@ function backToTentative() {
 document.addEventListener("DOMContentLoaded", () => {
 
     showPage(1);
+
+    // Initialize EmailJS
+    if (typeof emailjs !== "undefined") {
+
+        emailjs.init({
+            publicKey: EMAILJS_PUBLIC_KEY
+        });
+
+    }
 
 });
