@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akid Azizi | Birthday Invitation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="background-decoration">
+    <span>♡</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+</div>
+
+<main class="invitation-container">
+
+    <!-- PAGE 1: OPENING -->
+    <section class="page active" id="page1">
+
+        <div class="top-label">
+            A SPECIAL INVITATION
+        </div>
+
+        <div class="small-decoration">✦ ─── ♡ ─── ✦</div>
+
+        <p class="script-text">You're invited to...</p>
+
+        <h1 class="main-title">
+            Akid<br>
+            <span>Azizi's Day</span>
+        </h1>
+
+        <div class="bear-area">
+            <div class="bear-halo"></div>
+            <div class="bear-illustration">🧸</div>
+            <span class="bear-star star-one">✦</span>
+            <span class="bear-star star-two">♡</span>
+            <span class="bear-star star-three">✧</span>
+        </div>
+
+        <div class="opening-message">
+            <p>A little celebration,</p>
+            <p>a little collection of memories,</p>
+            <p>and a day made just for you.</p>
+        </div>
+
+        <div class="date-card">
+            <span>SATURDAY</span>
+            <strong>21 NOVEMBER 2026</strong>
+            <strong>11:00am - 8:00pm</strong>
+        </div>
+
+        <button class="primary-button" onclick="nextPage()">
+            OPEN INVITATION <span>♡</span>
+        </button>
+
+        <p class="bottom-note">Made with love, just for you.</p>
+
+    </section>
+
+
+    <!-- PAGE 2: BIRTHDAY WISHES -->
+    <section class="page" id="page2">
+
+        <div class="page-heading">
+            <span class="section-number">01 — A LITTLE SOMETHING</span>
+            <h2>Happy Belated<br><i>Birthday!</i></h2>
+            <p class="script-text">A few memories worth keeping ♡</p>
+        </div>
+
+<div class="photo-grid">
+
+    <div class="photo-slot photo-large has-image">
+        <img src="images/image4.jpg" alt="Our memory">
+        <small>01</small>
+    </div>
+
+    <div class="photo-slot has-image">
+        <img src="images/image2.jpg" alt="Our memory">
+        <small>02</small>
+    </div>
+
+    <div class="photo-slot has-image">
+        <img src="images/image1.jpg" alt="Our memory">
+        <small>03</small>
+    </div>
+
+    <label class="photo-slot photo-wide">
+        <input type="file" accept="image/*" class="photo-upload">
+        <img alt="Your memory">
+
+        <span class="photo-placeholder">
+            <span>♡</span>
+            Add another memory
+        </span>
+
+        <small>04</small>
+    </label>
+
+</div>
+</div>
+        <div class="birthday-letter">
+            <span class="letter-decoration">Dear Sayang, ♡</span>
+
+            <p>
+                Happy belated birthday!
+                I hope this new chapter brings you
+                happiness, wonderful memories and
+                everything you've been wishing for.
+            </p>
+
+            <p>
+                Here's to another month of happiness,
+                laughter and beautiful memories 
+                together hehe .
+            </p>
+
+            <p class="letter-ending">
+                Sincerely, manja ♡
+            </p>
+        </div>
+
+        <div class="bear-small">🧸</div>
+
+        <div class="navigation">
+            <button class="secondary-button" onclick="previousPage()">← BACK</button>
+            <button class="primary-button" onclick="nextPage()">NEXT →</button>
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3: TENTATIVE -->
+    <section class="page" id="page3">
+
+        <div class="page-heading">
+            <span class="section-number">02 — OUR LITTLE MEMORIES</span>
+            <h2>The Birthday<br><i>Itinerary</i></h2>
+            <p class="script-text">A day planned especially for us.</p>
+        </div>
+
+        <div class="itinerary-date">
+            <div>
+                <span>SATURDAY</span>
+                <strong>21 NOVEMBER 2026</strong>
+                <strong>11:00am - 8:00pm</strong>
+            </div>
+            <span class="date-heart">♡</span>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-time">11:00 AM</div>
+                <div class="timeline-dot">♡</div>
+                <div class="timeline-content">
+                    <span class="activity-number">01</span>
+                    <h3>The Pick Up</h3>
+                    <p>Let's start making memories together! (snap pic bnyak2)</p>
+                    <p>Not sure still need go to photobooth or not</p>
+                </div>
+            </div>
+
+
+        <div class="timeline-item">
+            <div class="timeline-time">12:30 PM</div>
+            <div class="timeline-dot">♡</div>
+
+            <div class="timeline-content">
+                <span class="activity-number">02</span>
+                <h3>Immersify KL</h3>
+
+                <p>Explore, experience and make memories.</p>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Immersify+KL+The+Labs+BBCC+Kuala+Lumpur"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="location-link">
+                    ♧ VIEW LOCATION ↗
+                </a>
+            </div>
+        </div>
+
+
+        <div class="timeline-item">
+            <div class="timeline-time">04:00 PM</div>
+            <div class="timeline-dot">♡</div>
+
+            <div class="timeline-content">
+                <span class="activity-number">03</span>
+                <h3>Wagyu Theather</h3>
+
+                <p>A little treat to celebrate your special day.</p>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Wagyu+Theather+Jalan+Yap+Ah+Shak+Kuala+Lumpur"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="location-link">
+                    ♧ VIEW LOCATION ↗
+                </a>
+            </div>
+        </div>
+
+
+            <div class="timeline-item">
+                <div class="timeline-time">06:00 PM</div>
+                <div class="timeline-dot">♡</div>
+                <div class="timeline-content">
+                    <span class="activity-number">04</span>
+                    <h3>Back Home</h3>
+                    <p>End of our little day together.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="itinerary-footer">
+            <span>🧸</span>
+            <p>Allowed to add or amend the tentative.</p>
+        </div>
+
+        <div class="navigation">
+            <button class="secondary-button" onclick="previousPage()">← BACK</button>
+            <button class="primary-button" onclick="nextPage()">NEXT →</button>
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 4: ATTENDANCE -->
+    <section class="page" id="page4">
+
+        <div class="page-heading">
+            <span class="section-number">03 — THE MOST IMPORTANT QUESTION</span>
+            <h2>One Little<br><i>Question...</i></h2>
+        </div>
+
+        <div class="attendance-bear">
+            <div class="bear-halo"></div>
+            <div class="bear-illustration">🧸</div>
+            <span class="bear-star star-one">♡</span>
+            <span class="bear-star star-two">✦</span>
+        </div>
+
+        <div class="attendance-question">
+            <h3>Akid Azizi,</h3>
+
+            <p>
+                Would you like to celebrate
+                your special day with me?
+            </p>
+
+            <span class="script-text">I hope your answer is yes ♡</span>
+        </div>
+
+    <div class="attendance-buttons">
+        <button class="primary-button yes-button" onclick="confirmAttendance()">
+            YES! ♡
+        </button>
+
+        <button class="secondary-button no-button" onclick="noNotification()">
+            NO
+        </button>
+    </div>
+
+        <p class="attendance-note">
+            Hint: There's only one right answer. hehe.
+        </p>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="success-message" id="successMessage">
+
+            <div class="success-bear">🧸</div>
+
+            <span class="section-number">ATTENDANCE CONFIRMED</span>
+
+            <h2>YEAYYYY! </h2>
+            <h2>I LOVE YOU!<i>♡</i></h2>
+
+            <p>
+                Can't wait to spend this
+                special day with you.
+            </p>
+
+            <div class="confirmation-card">
+                <span>YOUR SPECIAL DAY🔒</span>
+                <strong>21 NOVEMBER 2026</strong>
+                <span>SEE YOU SOON! ♡</span>
+            </div>
+
+            <p class="script-text">Your manjah.</p>
+
+        </div>
+
+        <div class="navigation last-navigation" id="successNavigation" style="display: none;">
+            <button class="secondary-button" onclick="backToTentative()">
+                ← BACK
+            </button>
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <span>♡</span> A LITTLE DAY TO REMEMBER <span>♡</span>
+    </footer>
+
+</main>
+
+<!-- NO BUTTON NOTIFICATION -->
+<div class="cute-modal" id="noModal">
+
+    <div class="modal-card">
+
+        <div class="modal-decoration">♡ 🧸 ♡</div>
+
+        <span class="modal-label">A LITTLE MESSAGE FOR YOU</span>
+
+        <h2>Nice Try!</h2>
+
+        <p class="modal-message">
+            Even if you choose NO,<br>
+            you still have to come with me!
+        </p>
+
+        <p class="modal-small">
+            No excuses, okay? Hehe 🤎
+        </p>
+
+        <div class="modal-divider">✦ ───── ♡ ───── ✦</div>
+
+        <button class="modal-button" onclick="closeNoModal()">
+            OKAY FINE ♡
+        </button>
+
+        <span class="modal-footer">made with a little bit of love</span>
+
+    </div>
+
+</div>
+
+</body>
+</html>
